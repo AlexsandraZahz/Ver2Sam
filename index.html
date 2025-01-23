@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сегментация мультимедиа</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Сегментация мультимедиа</h1>
+
+    <div class="step" id="step1">
+      <div class="input-group">
+        <label for="media-type">Тип входных данных</label>
+        <select id="media-type">
+          <option value="" disabled selected>Выберите тип данных для сегментации</option>
+          <option value="folder">Папка</option>
+          <option value="image">Изображение</option>
+          <option value="video">Видео</option>
+        </select>
+      </div>
+      <div class="button-group">
+        <button id="next1" class="next-button" disabled>Далее</button>
+      </div>
+    </div>
+
+    <div class="step hidden" id="step2">
+      <div class="input-group">
+        <label for="output-type">Тип выходных данных</label>
+        <select id="output-type">
+          <option value="" disabled selected>Выберите способ сохранения</option>
+          <option value="folder">Папка</option>
+          <option value="video">Видео</option>
+        </select>
+      </div>
+      <div class="button-group">
+        <button id="back2" class="back-button">Назад</button>
+        <button id="next2" class="next-button" disabled>Далее</button>
+      </div>
+    </div>
+
+    <div class="step hidden" id="step3">
+      <div class="input-group">
+        <label for="visualization-type">Способ обработки данных</label>
+        <select id="visualization-type">
+          <option value="" disabled selected>Выберите тип обработки</option>
+          <option value="vanilla">Ванильный SAM</option>
+          <option value="grayscale">В серых тонах</option>
+          <option value="masks">Только семантические маски</option>
+          <option value="overlay">Изображение с наложенными масками</option>
+        </select>
+      </div>
+      <div class="button-group">
+        <button id="back3" class="back-button">Назад</button>
+        <button id="next3" class="next-button" disabled>Далее</button>
+      </div>
+    </div>
+
+    <div class="step hidden" id="step4">
+      <div class="input-group">
+        <label for="file-path">Путь до сегментируемого объекта</label>
+        <div class="file-input">
+          <input type="text" id="file-path" placeholder="Выберите файл или папку" readonly>
+          <button id="browse-button" class="icon-button">📁</button>
+          <button id="clear-button" class="icon-button">❌</button>
+        </div>
+      </div>
+      <div class="button-group">
+        <button id="back4" class="back-button">Назад</button>
+        <button id="start-button" disabled>Сегментировать объекты</button>
+      </div>
+    </div>
+
+    <div id="loading-indicator" class="hidden">
+      <div class="loader"></div>
+      <p>Происходит сегментация. Ждите...</p>
+    </div>
+
+    <div class="display-section hidden">
+      <div class="original-object">
+        <h3>Исходный объект</h3>
+        <div id="original-content" class="content-placeholder">Выберите объект для отображения</div>
+      </div>
+      <div class="processed-object">
+        <h3>Результат</h3>
+        <div id="processed-content" class="content-placeholder">Результат появится здесь</div>
+        <p id="save-path"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
