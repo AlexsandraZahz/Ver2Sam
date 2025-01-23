@@ -9,8 +9,7 @@
 <body>
   <div class="container">
     <h1>Сегментация мультимедиа</h1>
-
-    <div class="step" id="step1">
+    <div class="step">
       <div class="input-group">
         <label for="media-type">Тип входных данных</label>
         <select id="media-type">
@@ -20,12 +19,6 @@
           <option value="video">Видео</option>
         </select>
       </div>
-      <div class="button-group">
-        <button id="next1" class="next-button" disabled>Далее</button>
-      </div>
-    </div>
-
-    <div class="step hidden" id="step2">
       <div class="input-group">
         <label for="output-type">Тип выходных данных</label>
         <select id="output-type">
@@ -34,13 +27,6 @@
           <option value="video">Видео</option>
         </select>
       </div>
-      <div class="button-group">
-        <button id="back2" class="back-button">Назад</button>
-        <button id="next2" class="next-button" disabled>Далее</button>
-      </div>
-    </div>
-
-    <div class="step hidden" id="step3">
       <div class="input-group">
         <label for="visualization-type">Способ обработки данных</label>
         <select id="visualization-type">
@@ -51,13 +37,6 @@
           <option value="overlay">Изображение с наложенными масками</option>
         </select>
       </div>
-      <div class="button-group">
-        <button id="back3" class="back-button">Назад</button>
-        <button id="next3" class="next-button" disabled>Далее</button>
-      </div>
-    </div>
-
-    <div class="step hidden" id="step4">
       <div class="input-group">
         <label for="file-path">Путь до сегментируемого объекта</label>
         <div class="file-input">
@@ -67,16 +46,13 @@
         </div>
       </div>
       <div class="button-group">
-        <button id="back4" class="back-button">Назад</button>
         <button id="start-button" disabled>Сегментировать объекты</button>
       </div>
     </div>
-
     <div id="loading-indicator" class="hidden">
       <div class="loader"></div>
       <p>Происходит сегментация. Ждите...</p>
     </div>
-
     <div class="display-section hidden">
       <div class="original-object">
         <h3>Исходный объект</h3>

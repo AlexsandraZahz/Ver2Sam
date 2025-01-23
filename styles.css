@@ -1,4 +1,4 @@
-
+/* Общие стили */
 body {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
@@ -102,45 +102,30 @@ select:focus, input[type="text"]:focus {
 
 .button-group {
   display: flex;
-  gap: 15px;
+  justify-content: center; /* Центрируем кнопку */
   margin-top: 25px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-.next-button, .back-button, #start-button {
+#start-button {
   padding: 15px 25px;
   font-size: 18px;
   border: none;
   border-radius: 10px;
+  background: #28a745;
+  color: white;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   font-weight: 600;
-  min-width: 120px;
+  min-width: 200px; /* Ширина кнопки */
   text-align: center;
 }
 
-.next-button, #start-button {
-  background: #28a745;
-  color: white;
-}
-
-.back-button {
-  background: #6c757d;
-  color: white;
-}
-
-.next-button:hover, #start-button:hover {
+#start-button:hover {
   background: #218838;
   transform: translateY(-2px);
 }
 
-.back-button:hover {
-  background: #5a6268;
-  transform: translateY(-2px);
-}
-
-.next-button:disabled, #start-button:disabled {
+#start-button:disabled {
   background: #ccc;
   cursor: not-allowed;
   transform: none;
@@ -202,6 +187,7 @@ select:focus, input[type="text"]:focus {
   font-size: 1.1rem;
 }
 
+/* Улучшенные стили для текста и отступов */
 p {
   margin: 10px 0;
   font-size: 1rem;
